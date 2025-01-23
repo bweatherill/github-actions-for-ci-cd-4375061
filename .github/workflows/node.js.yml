@@ -21,6 +21,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Install dependencies
+      run: npm ci # This uses the lock file for installation
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
